@@ -21,10 +21,26 @@ double SalariedEmployee::getSalary() const {
 	return monthlySalary;
 }
 
-void SalariedEmployee::print() const {
-
+void SalariedEmployee::print() {
+	Employee::print();
+	std::cout << "Salary: ";
+	std::cout << salaryCalculation();
+	std::cout << std::endl;
 }
 
 double SalariedEmployee::salaryCalculation() {
+	
+	double temp;
 
+	if (getDays() == 31 && getDays() > 0) {
+		temp = getSalary();
+	}
+	else if (days < 31 && days > 0) {
+		temp = (days / 31) * getSalary();
+	}
+	else {
+		throw std::invalid_argument ("days must be greater than 0 and lesser than 32");
+	}
+
+	return temp;
 }

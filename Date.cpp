@@ -16,9 +16,9 @@ Date::Date (int mn, int dy, int yr) {
 	day = checkDay(dy);
 
 	//output Date object to show when its constructor is called
-	std::cout << "Date object constructor for date ";
-	print();
-	std::cout << std::endl;
+	//std::cout << "Date object constructor for date ";
+	//print();
+	//std::cout << std::endl;
 }
 
 void Date::print() const {
@@ -26,8 +26,8 @@ void Date::print() const {
 }
 
 Date::~Date() {
-	std::cout << "Date object destructor for date "; print();
-	std::cout << std::endl;
+	//std::cout << "Date object destructor for date "; print();
+	//std::cout << std::endl;
 }
 
 //confirm proper day value with leap year

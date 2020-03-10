@@ -4,18 +4,18 @@
 #include <iostream>
 #include "Employee.h"
 
-class SalariedEmployee {
+class SalariedEmployee : public Employee {
 	private:
 		double monthlySalary;
 	public:
-		SalariedEmployee (const int &, const std::string &, const std::string &, const char &, const int &, const Date &);
+		SalariedEmployee (const int &, const std::string &, const std::string &, const char &, const int &, const Date &, const double &);
 
 		void setSalary(double salary);
 		int getSalary() const;
 
-		void print() const;
+		void print();
 
-		double salaryCalculation();
+		double salaryCalculation(int days);
 
 };
 
